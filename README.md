@@ -1,7 +1,7 @@
 # _REST API Country Library_
 
 ### _Язык реализации Java_
-Spring Boot + PostgreSQL
+Spring Boot + Postgres SQL
 
 1. Поиск стран по названию на любом языке в первую очередь интересен Русский...
 2. как это работает есть такой в интернете сервис restcountries.com
@@ -11,10 +11,28 @@ Spring Boot + PostgreSQL
 6. По этому английскому названию делаем запрос и получаем полную информацию.
 
 TODO:
-1. Получить данные и создать базу Native => English
-2. Создать EndPoint для поиска по названию
+1. ~~Получить данные~~ и создать базу Native => English
+    - создать DB (2 базы, country Name / country Native Name)
+    - Распарсить Json
+2. ~~Создать EndPoint для поиска по названию.~~
+   - добавить реализацию к открытым endPoints.
+ 
 3. Реализовать пересылку запроса к restcountries.com
 4. Вернуть полученные данные.
+5. Надо реализовать какую-то авторизацию для admin области.
 
 History:
 2022-12-04 Init
+2022-12-11 EndPoints
+Продумал несколько endPoints
+GET /countrybyname?name=
+информация о стране по официальному названию
+GET /countrybynativename?name=
+информация о стране по названию на разных языках
+GET /nativename?name=
+получить официальное название страны по языковому названию 
+GET /allnativename?name=
+получить список имен страны по официальному названию
+
+GET /admin/parse
+- сделать парсинг названий из Json
