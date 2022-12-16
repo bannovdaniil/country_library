@@ -12,7 +12,7 @@ Spring Boot + Postgres SQL
 
 TODO:
 1. ~~Получить данные~~ и создать базу Native => English
-    - создать DB (2 базы, country Name / country Native Name)
+    - ~~создать DB (2 базы, country Name / country Native Name)~~
     - Распарсить Json
 2. ~~Создать EndPoint для поиска по названию.~~
    - добавить реализацию к открытым endPoints.
