@@ -3,7 +3,7 @@ package com.bannovdaniil.country_library.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "COUNTRY_NATIVE_NAME", schema = "Public")
+@Table(name = "country_native_name", schema = "Public")
 public class CountryNativeName {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -11,6 +11,6 @@ public class CountryNativeName {
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "COUNT_ID")
+    @JoinColumn(name = "country_id")
     private CountryName countryName;
 }
